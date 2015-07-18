@@ -1,0 +1,71 @@
+ru:
+    
+  MemberProfileField:
+    PLURALNAME: Анкеты участников
+    SINGULARNAME: Анкета участника
+  MemberExtend:
+    FirstName: Имя
+    SecondName: Фамилия
+    ThirdName: Отчество
+    PhoneWork: Телефон рабочий
+    PhoneMobile: Телефон мобильный
+    Education: Образование
+    CorporateEmail: Корпоративный email
+    Birthday: Дата рождения
+    TabNumber: Табельный номер
+    CurrentPosition: Текщая должность
+    CurrentPositionExperience: Опыт работы на текущей должности
+    Languages: Владение языками
+    
+  Position:
+    PLURALNAME: Должности
+    SINGULARNAME: Должность #translated singularname
+    has_one_PositionHolder: Страница отображения резервных должностей
+    has_one_Department: Отдел
+    has_many_PositionQuestions: Вопросы
+    has_many_Orders: Заявки
+    has_many_Statuses: Статусы
+    Name: Резервная должность
+    
+  Order:
+    PLURALNAME: Статусы заявок
+    SINGULARNAME: Статус заявки #translated singularname
+    has_one_Position: Резервная должность
+    has_one_Member: Участник программы
+    Status: Статус заявки
+    db_Status_Pendling: На рассмотрении
+    db_Status_Approved: Подтверждена
+    db_Status_Disaproved: Отклонена
+    DisaproveReason: Причина отказа
+    MemberName: Имя Участника
+    PositionTitle: Резервная должность
+    OrderDate: Дата заявки
+    MotivationLetter: Мотивационное письмо
+    
+  OrderAdmin:
+    MENUTITLE: Заявки
+    
+  PositionQuestion:
+    PLURALNAME: Вопросы теста
+    SINGULARNAME: Вопрос теста #translated singularname
+    has_one_Position: Резервная должность
+    Question: Вопрос
+    PositionTitle: Резервная должность
+  Department:
+    PLURALNAME: Отделы компании
+    SINGULARNAME: Отдел компании
+    has_many_Positions: Резервные должности
+    Name: Наименование отдела
+  PositionHolder:
+    PLURALNAME: Отображение должностей
+    SINGULARNAME: Отображение должностей
+    has_many_Positions: Резервные должности
+  PositionAdmin.MENUTITLE: Резервные должности
+  
+  anketaForm.saveAnket: Сохранить анкету
+  saveAnket.sucess: Ваша анкета обновлена!
+  addingStaus.False: Вы не можите подать заявку! Пожалуйста зарегестрируйтесь или авторизуйтесь на сайте.
+  submitForm.success: Ваша заявка принята и находится на рассмотрении!
+  formSetOrder.addLetter: Добавить мотивационное письмо
+  formSetOrder.submit: Отправить на рассмотрение
+  

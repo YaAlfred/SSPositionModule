@@ -1,0 +1,39 @@
+en:
+  PositionAdmin:
+    MENUTITLE: Positions
+  StatusesBar:
+    MENUTITLE: 'Statuses Bar'
+  Department:
+    PLURALNAME: Departments
+    SINGULARNAME: Department
+  Page:
+    DESCRIPTION: 'Generic content page'
+    PLURALNAME: Pages
+    SINGULARNAME: Page
+  Position:
+    PLURALNAME: Positions
+    SINGULARNAME: Position
+  PositionHolder:
+    DESCRIPTION: 'Generic content page'
+    PLURALNAME: 'Position Holders'
+    SINGULARNAME: 'Position Holder'
+  PositionQuestion:
+    PLURALNAME: 'Position Questions'
+    SINGULARNAME: 'Position Question'
+  SiteMap:
+    DESCRIPTION: 'Generic content page'
+    PLURALNAME: 'Site Maps'
+    SINGULARNAME: 'Site Map'
+  SiteTree:
+    PLURALNAME: Pages
+    SINGULARNAME: Page
+  Status:
+    PLURALNAME: Statuss
+    SINGULARNAME: Status
+    
+  anketaForm.saveAnket: Save Anket
+  saveAnket.sucess: sucess!
+  addingStaus.False: False.
+  submitForm.success: success!
+  formSetOrder.addLetter: add Letter
+  formSetOrder.submit: submit

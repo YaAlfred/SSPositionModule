@@ -1,0 +1,36 @@
+#position_holder td{position:relative;}
+#position_holder td .question{position:absolute; display:none;}
+.alertify-cover{background:rgb(0,0,0);opacity:0.6;}
+p.alertify-message{font-size:2em;line-height: 1.5;margin-bottom:1em;}
+/*.alertify-button:first-child, .alertify-button:first-child:hover,.alertify-button:first-child:focus{margin-left:30%;}*/
+#loading{background:url(../images/ajax-loader.gif) 50% 50% no-repeat;position:absolute;left:0%;top:0%;width:100%;height:100%;display: none;}
+#letterUploadField p small{font-weight: bold;font-size: 1.5em;}
+.LeftSideBar{width:50%;float: left;}
+.RightSideBar{width:50%;float: right;}
+p.message {
+    padding:10px;
+    margin: 10px 10px 0;
+    border: 1px solid #FFF;
+}
+ 
+p#SuccessMessage {
+    color:#3E933A;
+    background:#E2F7D8;
+    border-color:#9FDE9C;
+}
+ 
+p#NoticeMessage {
+    color:#CCBD00;
+    background:#FFF8D7;
+    border-color:#F1E988;
+}
+ 
+p#ErrorMessage {
+    color: #DA1D1D;
+    background: #FFDFDF;
+    border-color: #FFBBBB;
+}
+label.ss-uploadfield-item-name b{font-weight: normal;}
+label.ss-uploadfield-item-name b:after{content: ":";}
+label.ss-uploadfield-fromcomputer{text-decoration: underline; font-size: 16px;font-weight: bold;}
+label.ss-uploadfield-fromcomputer:hover{color:#666;}
