@@ -21,7 +21,7 @@ ru:
     PLURALNAME: Должности
     SINGULARNAME: Должность #translated singularname
     has_one_PositionHolder: Страница отображения резервных должностей
-    has_one_Department: Отдел
+    has_one_Department: Структурное подразделение
     has_many_PositionQuestions: Вопросы
     has_many_Orders: Заявки
     has_many_Statuses: Статусы
@@ -52,8 +52,8 @@ ru:
     Question: Вопрос
     PositionTitle: Резервная должность
   Department:
-    PLURALNAME: Отделы компании
-    SINGULARNAME: Отдел компании
+    PLURALNAME: Структурные подразделения
+    SINGULARNAME: Структурное подразделение
     has_many_Positions: Резервные должности
     Name: Наименование отдела
   PositionHolder:

@@ -8,12 +8,12 @@ class Order extends DataObject {
         'DisaproveReason'  => 'Text'
     );
 
-    
+
     //Translate enum values(Statuses)
     public function DbField() {
         return i18nEnum::getTranslatedValue($this->className, __FUNCTION__, $this->{__FUNCTION__});
     }
-    
+
     private static $has_one        = array(
         'Position' => 'Position',
         'Member'   => 'Member',
@@ -30,6 +30,7 @@ class Order extends DataObject {
 
         $labels['MotivationLetter']       = _t('Order.MotivationLetter', "Motivation Letter");
         $labels['OrderDate']       = _t('Order.OrderDate', "Order Date");
+        $labels['Status']      = _t('Order.Status', "Status");
         $labels['i18nStatus']      = _t('Order.Status', "Status");
         $labels['DisaproveReason'] = _t('Order.DisaproveReason', "DisaproveReason");
         $labels['MemberName']      = _t('Order.MemberName', "MemberName");
@@ -37,8 +38,8 @@ class Order extends DataObject {
 
         return $labels;
     }
-    
-    public function geti18nStatus() { 
+
+    public function geti18nStatus() {
         //return $this->Status;
         return _t('Order.db_Status_'.$this->Status, $this->Status);
     }
@@ -77,7 +78,7 @@ class Order extends DataObject {
         //return Permission::check('CMS_ACCESS_StatusesBar', 'any', $member);
         return Permission::check('ADMIN');
     }
-    
+
     function getCMSFields() {
         $fields = parent::getCMSFields();
         $upload = new UploadField(
@@ -87,8 +88,8 @@ class Order extends DataObject {
         $upload->setConfig('allowedMaxFileNumber', 1);
         $upload->getValidator()->setAllowedExtensions(array('doc', 'docx'));
         $fields->addFieldToTab('Root.Main', $upload);
-        
-    
+
+
         return $fields;
     }
 

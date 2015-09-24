@@ -1,6 +1,12 @@
 jQuery(function ($) {
 
-    //Hide messages on click
+    //Устанавливаем куку, если пользователь заходит в первый раз - показываем справку
+    document.cookie ="visit=not_first_time";
+    if(document.cookie.indexOf("not_first_time") >= 0){
+        $('.modal').modal('show');
+    }
+    
+    //Hide pop messages on click
     $(document).click(function () {
         $('.message').hide();
     });
@@ -14,6 +20,7 @@ jQuery(function ($) {
       }
     });
 
+    //Check anket fields to hide it, if they are filled
     var checkAnketFieds = $("#Form_anketaForm :input").filter(function() {
         return $.trim(this.value).length === 0;
     }).length > 0;
@@ -25,7 +32,7 @@ jQuery(function ($) {
       $('.anketa').hide();
     }
 
-    //Тестирование
+    //Тестирование(Testing function)
     $('#position_holder td a').on('click', function () {
         //Проверка на заполненность анкеты пользователя
         var anyFieldIsEmpty = $("#Form_anketaForm :input").filter(function() {
@@ -35,10 +42,6 @@ jQuery(function ($) {
         if (anyFieldIsEmpty) {
             alertify.alert(ss.i18n._t('POSITION_MODULE.FILL_ALL_INPUTS'));
         }else{
-            //reset();
-            //alertify.set({ labels: { ok: "Да", cancel: "Нет" } });
-            //debugger;
-            //$('#position_holder').arcticmodal();
             if ($(this).next().text() == '') {
                 alertify.set({labels: {ok: "Ok", cancel: "Нет"}});
                 alertify.alert(ss.i18n._t('POSITION_MODULE.NO_TESTS_YET'));
@@ -75,6 +78,7 @@ jQuery(function ($) {
         });
     }
 
+    //Функция установки статуса пользователя при успешном прохождении теста
     function addingStatus(positionId) {
         $.ajax({
             beforeSend: function () {
